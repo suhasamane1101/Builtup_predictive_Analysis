@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <style>
+        .info {
+            margin: 20px 20px;
+        }
+        body {
+            background-color: antiquewhite;
+            
+        }
+    </style>
+
+</head>
+<body class="bg-light">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">PM.AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Schedular</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./feedback.html">Feedback</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Help</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+    <div class="about">
+
+        <div class="image">
+           <center> <img src="./imgages/pumps.jpg" alt="motor" style="margin-left: 25px; height: 400px; width: 500px;"></center>
+        </div>
+
+        <div class="info">
+            <h2>Pump</h2>
+           <p> A pump is a mechanical device used to move fluids (liquids or gases) from one place to another. It works by creating a pressure difference, which forces the fluid to flow. Here are some key points and examples:</p>
+
+<h6> <b>1. Types of Pumps:</b>
+   - Centrifugal Pumps: These pumps use centrifugal force to create pressure and move fluid. They are commonly used in industries such as water treatment, agriculture, and chemical processing.
+   - Positive Displacement Pumps: These pumps trap a certain amount of fluid and then force it out. Examples include piston pumps, diaphragm pumps, and gear pumps.
+   - Submersible Pumps: These are designed to be submerged in the fluid they are pumping, commonly used for drainage, sewage pumping, and borehole pumping.
+   - Reciprocating Pumps: These pumps use a piston or diaphragm to move fluid, commonly found in high-pressure applications like hydraulic systems and certain industrial processes.
+   - Vacuum Pumps: These pumps are used to remove gas molecules from a sealed volume, creating a vacuum. Examples include rotary vane pumps and turbomolecular pumps.
+</h6>
+
+<h6><b>2. Functionality and Components:</b>
+   - Inlet: Where the fluid enters the pump.
+   - Impeller (for centrifugal pumps): Rotating component that imparts energy to the fluid.
+   - Casing: Encloses the impeller and directs the flow of fluid.
+   - Outlet: Where the pressurized fluid exits the pump.
+   - Motor or Power Source: Provides the energy to drive the pump.
+</h6>  
+
+
+<h6><b>3. Examples of Pump Applications:</b>
+   - Water Supply: Pumps are used to supply water from wells, reservoirs, or municipal water sources to homes, industries, and agricultural fields.
+   - Oil and Gas Industry: Pumps are essential for transporting crude oil, refined products, and natural gas through pipelines.
+   - Chemical Processing: Pumps are used to transfer various chemicals and fluids within manufacturing processes.
+   - Heating, Ventilation, and Air Conditioning (HVAC): Pumps are employed to circulate coolant or refrigerant in heating and cooling systems.
+   - Waste Management: Pumps are utilized in sewage systems, drainage systems, and wastewater treatment plants to move sewage and sludge.
+</h6>
+</div>
+
+    </div>
+
+    <div class="album py-4 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+            <a href="{{url_for('Maintenance_scheduler')}}">
+            <div class="col">
+              <div class="card shadow-sm">
+                <center>              <h6>Schedular</h6>
+                </center>
+                <img src="{{ url_for('static', filename='images/output-onlinepngtools.png') }}" alt="motor">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </a>
+            <a href="{{url_for('predictdata')}}">
+            <div class="col">
+              <div class="card shadow-sm">
+                <center>              <h6>Predictive Maintenance</h6>
+                </center>
+                <img src="{{ url_for('static', filename='images/pre.png.png') }}" alt="pumps">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+  
+            <a href="{{url_for('view_three')}}">
+            <div class="col">
+              <div class="card shadow-sm">
+                <center>              <h6>Accuracy Graph</h6>
+                </center>
+                <img src="{{ url_for('static', filename='images/accuracyG.png') }}" alt="pumps">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>

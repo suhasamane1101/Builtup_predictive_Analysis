@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-eaQ/Pc/5C21aZ7tKFXlM1PjxUpJcbSN6Ud6xrwD5Jd2/T6gTt6S50ElM0kxsA" crossorigin="anonymous"></script>
+
+    <!-- Custome-css -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            background-color: rgb(15 23 42);
+            
+        }
+        
+        
+        * {
+            color: #fff;
+            
+        }
+        
+        #update {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">PM.AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('Maintenance_scheduler') }}">Schedular</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('feedback')}}">Feedback</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('help') }}">Help</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
+    <div class="container">
+        <h2 class="mt-5 mb-5">Maintenance Scheduler</h2>
+        <div class="mb-5">
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control"
+                    id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="age">Employee ID</label>
+                    <input type="number" name="age" class="form-control" id="age" placeholder="Enter your Employee ID">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="address">Post</label>
+                    <input type="text" name="address" class="form-control" id="address" placeholder="Enter your post">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="#">Date</label>
+                    <input type="date" name="email" class="form-control" id="email" placeholder="">
+                </div>
+                <div class="col-lg-12 mt-5">
+                    <button class="btn btn-primary " id="Submit"
+                    onclick="AddData()">Add Data</button>
+                    <!-- <button class="btn btn-primary" id="update" onclick="AddData()">Update</button> -->
+                    <button class="btn btn-primary" id="update">Update</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <div class="col-12">
+                <table class="table table-bordered" id="crudTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Employee ID</th>
+                            <th>Post</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./maintaince_js.js"></script>
+
+</body>
+</html>
